@@ -6,6 +6,7 @@ Connect to `https://aihackr.com/mcp` using Streamable HTTP. Sign in to AIHackr w
 
 - **Claude** · In Customize → Connectors, add a custom connector named AIHackr and paste the endpoint.
 - **Cursor** · Add the configuration below to your MCP settings.
+- **Gemini CLI** · Run `gemini extensions install https://github.com/biserd/aihackr-mcp`, then use `/mcp auth aihackr` in Gemini CLI to connect your account.
 - **VS Code** · [Install AIHackr in VS Code](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522aihackr%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252Faihackr.com%252Fmcp%2522%257D), or run **MCP: Add Server**, choose **HTTP**, and enter the endpoint. Then start the server from **MCP: List Servers** and follow the sign-in prompt.
 
 ```json

@@ -1,0 +1,11 @@
+{
+  "name": "aihackr",
+  "version": "0.8.0",
+  "description": "Read public webpages, extract structured data, discover links, and run bounded crawls.",
+  "mcpServers": {
+    "aihackr": {
+      "type": "http",
+      "url": "https://aihackr.com/mcp"
+    }
+  }
+}
