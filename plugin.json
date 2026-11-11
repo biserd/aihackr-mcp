@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aihackr",
+  "version": "0.8.0",
+  "description": "Read public webpages, extract structured data, discover links, and run bounded crawls.",
+  "author": {
+    "name": "Big Apple Digital LLC",
+    "url": "https://aihackr.com",
+    "email": "hello@aitracker.com"
+  },
+  "homepage": "https://aihackr.com/docs/mcp",
+  "repository": "https://github.com/biserd/aihackr-mcp",
+  "license": "AGPL-3.0-or-later",
+  "keywords": ["web-data", "scraping", "crawl", "markdown"]
+}

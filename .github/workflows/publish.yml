@@ -1,0 +1,30 @@
+name: Publish to the MCP Registry
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Download and verify the publisher
+        run: |
+          archive=mcp-publisher_linux_amd64.tar.gz
+          curl --fail --silent --show-error --location --retry 3 \
+            "https://github.com/modelcontextprotocol/registry/releases/download/v1.8.9/$archive" \
+            --output "$archive"
+          echo "4d527ca8f1ced0394c962dc925c2a4a4addef441cbefd62501c875e9481823a8  $archive" | sha256sum --check
+          tar -xzf "$archive" mcp-publisher
+      - name: Publish the remote server manifest
+        run: |
+          ./mcp-publisher validate server.json
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish server.json
