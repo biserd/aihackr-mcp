@@ -3,8 +3,15 @@
   "name": "io.github.biserd/aihackr",
   "title": "AIHackr",
   "description": "Read public webpages, extract structured data, discover links, and run bounded crawls.",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "websiteUrl": "https://aihackr.com/docs/mcp",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/biserd/aihackr-mcp/main/assets/aihackr-mark.png",
+      "mimeType": "image/png",
+      "sizes": ["128x128"]
+    }
+  ],
   "repository": {
     "url": "https://github.com/biserd/aihackr-mcp",
     "source": "github"
